@@ -1,0 +1,227 @@
+html {
+  height: 100%;
+}
+#nac:hover {
+  color: crimson;
+}
+.img_header {
+  background-image: url("img/christina-wocintechchat-com-NDoVgcS_lZM-unsplash.jpg");
+  background-size: cover;
+  height: calc(100vh - 112px);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.img_header::before {
+  content: "";
+  background-color: rgba(19, 19, 19, 0.204);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.dfr::before {
+  content: "";
+  background-color: rgba(99, 95, 96, 0.799);
+  height: 100%;
+  width: 5px;
+  position: absolute;
+}
+.dfr:hover::before {
+  background-color: crimson;
+}
+.dfr:hover {
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.397);
+}
+#ss {
+  background-image: url("img/wave.png");
+  background-size: contain;
+
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 18rem;
+  /* position: scroll, local;
+top:550px; */
+}
+
+/* basic stylings ------------------------------------------ */
+
+#nac:hover {
+  color: crimson;
+}
+
+/* form starting stylings ------------------------------- */
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: #efc034;
+}
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #848282;
+  font-size: 17px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ffffff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #002cdb;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@media (min-width: 0px) and (max-width: 990px) {
+  .mide1 {
+    text-align: center;
+  }
+}
+
+/* .img-card {
+  position: relative;
+  left: 15px;
+
+bottom: 250;
+  width: 200px;
+  height: 0px;
+  transition: 1.5s;
+  
+}
+
+.mn:hover .img-card {
+      
+    height: 200px;
+    transition: 1s;
+    bottom: 20px; 
+}
+.mn:hover .rr {
+      
+ display: block;
+ position: relative;
+top: 5px;
+      transition: 1s;
+
+}
+
+.img-card:hover{
+width: 400px;
+}
+
+.rr{
+        transition: 1s;
+ display: none;
+ position: absolute;
+  top: 50px;
+      transition: 1s;
+
+} */
+
+
+.img_card{
+    /* display: none  !important; */
+transition:  5s;
+position: relative;
+bottom:  180px;
+}
+.boxsr:hover .img_card{
+    display: block !important;
+transform: rotate(50deg);
+/* transition:  5s; */
+bottom:  0px;
+
+}
